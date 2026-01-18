@@ -5,7 +5,6 @@ const play = document.getElementById("play");
 const nick = document.querySelector(".glitch");
 const text = nick.innerText;
 nick.innerText = "";
-
 let i = 0;
 setInterval(() => {
   if (i < text.length) {
