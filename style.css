@@ -68,7 +68,7 @@ body {
 .noise {
   position: fixed;
   inset: 0;
-  background: url("assets/noise.png");
+  background: url("noise.png");
   background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
