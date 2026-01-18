@@ -19,20 +19,22 @@ body {
   background: black;
 }
 
- body {
+body {
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
 }
+
 :root {
   --glow: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
   body {
   background: black;
   min-height: 100vh;
@@ -42,6 +44,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+body {
+ animation: bgFloat 25s linear infinite;
+}
+
+@keyframes bgFloat {
+ from { background-position: center 0%; }
+ to { background-position: center 15%; }
+}
 
 }
 /* ENTER */
@@ -78,16 +89,17 @@ background-position: center;
 
 /* Card */
 .profile-card {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 340px;
-  padding: 30px;
-  background: rgba(10,10,10,0.9);
-  border-radius: 24px;
+ animation: floatCard 4s ease-in-out infinite;
+}
+.nickname, .name {
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 60px var(--glow);
-  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+ 0% { transform: translateY(0px); }
+ 50% { transform: translateY(-10px); }
+ 100% { transform: translateY(0px); }
 }
 
 .hidden {
@@ -283,10 +295,12 @@ background-position: center;
  transition: 0.4s ease;
 }
 
-.profile-card:hover {
- transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
- box-shadow: 0 0 40px rgba(255,255,255,0.2);
+.profile-card {
+ background: transparent;
+ box-shadow: none;
+ backdrop-filter: none;
 }
+
 body::before {
   content: "";
   position: fixed;
