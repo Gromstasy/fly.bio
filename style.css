@@ -1,4 +1,4 @@
- *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -68,7 +68,7 @@ body {
 .noise {
   position: fixed;
   inset: 0;
-  background: url("assets/noise.gif");
+  background: url("assets/noise.png");
   background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
