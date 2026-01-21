@@ -1,4 +1,4 @@
-*,
+ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -58,7 +58,7 @@ body {
 /* ENTER */
 .enter-screen {
  backdrop-filter: blur(10px);
- background: rgba(0,0,0,0.8);
+ background: rgb(0, 0, 0);
  animation: fadeEnter 2s infinite alternate;
 }
 
@@ -79,7 +79,7 @@ body {
 .noise {
   position: fixed;
   inset: 0;
-  background: url("noise.png");
+  background: url("noise.gif");
   background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
@@ -225,7 +225,7 @@ background-position: center;
   
   box-shadow:
     0 0 12px hsla(0, 0%, 0%, 0.00),
-    inset 0 0 6px #ffffff00;
+    inset 0 0 6px #000000;
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
